@@ -7,13 +7,11 @@ class Calculator:
     @staticmethod
     def getStability(number):
         counter = 1
-        while True:
-            digitsSum = Calculator.getDigitsSum(number) 
-            sumLength = Calculator.strLen(digitsSum)
-            counter += 1
+        digitsSum = Calculator.getDigitsSum(number)
 
-            if sumLength != 1: 
-                break
+        while Calculator.strLen(digitsSum) > 1:
+            digitsSum = Calculator.getDigitsSum(digitsSum) 
+            counter += 1
 
         return counter
 
@@ -26,11 +24,11 @@ class Calculator:
     def strLen(n):
         return len(str(n))
 
+#7898->32->5 trwałość 2, pierwiastek 5
+#12->3 trwałość 1 pierwiastek 3
+#97985->38->11->2 trwałość 3 pierwiastek 2
 
 while True:
-    try:
-        a = int(input("Input your number: "))
-        print("Pierwiastek cyfrowy -> " + str(Calculator.getDigitalRoot(a)))
-        print("Trwałość -> " + str(Calculator.getStability(a)))
-    except ValueError as exception:
-        print(str(exception))
+    a = int(input("Input your number: "))
+    print("Pierwiastek cyfrowy -> " + str(Calculator.getDigitalRoot(a)))
+    print("Trwałość -> " + str(Calculator.getStability(a)))
