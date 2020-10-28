@@ -1,13 +1,11 @@
 import random
 
-
 def getRandomSequenceOf(length, sequenceItemRange):
     sequence = []
     for x in range(length):
         sequence.append(random.randrange(sequenceItemRange))
 
     return sequence
-
 
 def printMostCommonElementMessage(sequence):
     counter = {}

@@ -17,8 +17,7 @@ class Calculator:
     @staticmethod
     def getDigitalRoot(number):
         sum = Calculator.getDigitsSum(number)
-        return sum if Calculator.strLen(
-            sum) == 1 else Calculator.getDigitalRoot(sum)
+        return sum if Calculator.strLen(sum) == 1 else Calculator.getDigitalRoot(sum)
 
     @staticmethod
     def strLen(n):

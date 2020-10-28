@@ -1,7 +1,6 @@
 from Solver import Solver
 import math
 
-
 class QuadraticSolver(Solver):
     @staticmethod
     def getSolution(equation):

@@ -1,6 +1,5 @@
 from Solver import Solver
 
-
 class LinearSolver(Solver):
     @staticmethod
     def getSolution(equation):

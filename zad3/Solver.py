@@ -1,8 +1,6 @@
 import sys
 sys.path.append('C:/Users/Lenovo/Desktop/studia/wstęp do informatyki/zadania')
-
 from zad1.Calculator import Calculator
-
 
 class Solver:
     @staticmethod
