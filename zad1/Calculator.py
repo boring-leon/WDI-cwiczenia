@@ -1,9 +1,9 @@
 class Calculator:
-    
     @staticmethod
-    def getGreatestCommonDivisor (a, b):
+    def getGreatestCommonDivisor(a, b):
         Calculator.throwIfBothZeros(a, b)
-        return b if a % b == 0 else Calculator.getGreatestCommonDivisor(b, a % b)
+        return b if a % b == 0 else Calculator.getGreatestCommonDivisor(
+            b, a % b)
 
     @staticmethod
     def getLeastCommonMultiple(a, b):
@@ -17,6 +17,5 @@ class Calculator:
 
     @staticmethod
     def throwIfNonUniqueInput(a, b):
-        if a == b: 
+        if a == b:
             raise ValueError("Enter two unique numbers")
-    
