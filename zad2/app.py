@@ -6,5 +6,5 @@ from Calculator import Calculator
 
 while True:
     a = int(input("Input your number: "))
-    print("Pierwiastek cyfrowy -> " + str(Calculator.getDigitalRoot(a)))
-    print("Trwałość -> " + str(Calculator.getStability(a)))
+    print(f"Pierwiastek cyfrowy -> { Calculator.getDigitalRoot(a) }")
+    print(f"Trwałość -> { Calculator.getStability(a) }")

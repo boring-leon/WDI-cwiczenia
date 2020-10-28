@@ -26,8 +26,8 @@ def printMostCommonElementMessage(sequence):
     for key in counter.keys():
         if counter.get(key) == counter.get(maxKey) and maxKey != key:
             alternativeMaxItems.append(key)
-
-    print("Ciąg -> " + str(sequence))
-    print("Najczęściej (" + str(counter.get(maxKey)) + "x) występuje w ciągu liczba " + str(maxKey))
+            
+    print(f"Ciąg -> {sequence}")
+    print(f"Najczęściej ({counter.get(maxKey)}x) występuje w ciągu liczba {maxKey}")
     if len(alternativeMaxItems) > 0:
-        print("Wykryto inne wartości występujące w ciągu " + str(counter.get(maxKey)) + "x : " + str(alternativeMaxItems))
+        print(f"Wykryto inne wartości występujące w ciągu {counter.get(maxKey)}x -> {alternativeMaxItems}")

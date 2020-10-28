@@ -16,7 +16,7 @@ class QuadraticSolver(Solver):
             x1 = Solver.parseFraction(-b + math.sqrt(delta), 2 * a)
             x2 = Solver.parseFraction(-b - math.sqrt(delta), 2 * a)
 
-            return "x1 = " + str(x1) + " x2 = " + str(x2)
+            return f"x1 = {x1}, x2 = {x2}"
 
         elif delta == 0:
             x = Solver.parseFraction(-b, 2 * a)
@@ -25,16 +25,15 @@ class QuadraticSolver(Solver):
                       "a": a,
                       "p": -x
                   }))
-            return "x = " + str(x)
+            return f"x = {x}"
 
         else:
-            return "Rozwiązanie nie istnieje"
+            return f"Rozwiązanie nie istnieje, ponieważ delta = {Solver.parseIntOrReturn(delta)}"
         #return Solver.parseFraction(-b, a)
 
     @staticmethod
     def getShortMultiplicationFormulaString(equation):
         p = equation.get("p")
-        a = equation.get("a") if equation.get("a") != 1 else ""
+        a = Solver.parseIntOrReturn(equation.get("a")) if equation.get("a") != 1 else ""
 
-        pStr = str(p) if p < 0 else "+ " + str(p)
-        return str(Solver.parseIntOrReturn(a)) + "(x " + pStr + ")^"
+        return f"{a}(x {Solver.getSign(p)}{p})^"
