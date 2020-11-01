@@ -8,4 +8,4 @@ class LinearSolver(Solver):
         a = equation.get("a")
         b = equation.get("b")
 
-        return f"x = {Solver.parseFraction(-b, a)}
+        return f"x = {Solver.parseFraction(-b, a)}"
