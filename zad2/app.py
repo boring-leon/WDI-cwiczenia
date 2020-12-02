@@ -1,4 +1,4 @@
-from Calculator import Calculator
+import Calculator
 
 #7898->32->5 trwałość 2, pierwiastek 5
 #12->3 trwałość 1 pierwiastek 3

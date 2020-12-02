@@ -1,4 +1,4 @@
-from Calculator import Calculator
+import Calculator
 
 while True:
     try:

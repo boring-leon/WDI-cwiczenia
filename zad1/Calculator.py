@@ -1,21 +1,17 @@
-class Calculator:
-    @staticmethod
-    def getGreatestCommonDivisor(a, b):
-        Calculator.throwIfBothZeros(a, b)
-        gcd = b if a % b == 0 else Calculator.getGreatestCommonDivisor(b, a % b)
-        return gcd if int(gcd) == gcd else 1
+def getGreatestCommonDivisor(a, b):
+    throwIfBothZeros(a, b)
+    gcd = b if a % b == 0 else getGreatestCommonDivisor(b, a % b)
+    return gcd if int(gcd) == gcd else 1
 
-    @staticmethod
-    def getLeastCommonMultiple(a, b):
-        Calculator.throwIfNonUniqueInput(a, b)
-        return abs(a * b) / Calculator.getGreatestCommonDivisor(a, b)
+def getLeastCommonMultiple(a, b):
+    throwIfNonUniqueInput(a, b)
+    return abs(a * b) / getGreatestCommonDivisor(a, b)
 
-    @staticmethod
-    def throwIfBothZeros(a, b):
-        if a == 0 and b == 0:
-            raise ValueError("Provided numbers can't be both zeros!")
 
-    @staticmethod
-    def throwIfNonUniqueInput(a, b):
-        if a == b:
-            raise ValueError("Enter two unique numbers")
+def throwIfBothZeros(a, b):
+    if a == 0 and b == 0:
+        raise ValueError("Provided numbers can't be both zeros!")
+
+def throwIfNonUniqueInput(a, b):
+    if a == b:
+        raise ValueError("Enter two unique numbers")
