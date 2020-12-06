@@ -1,3 +1,4 @@
+#n-ty element ciągu Fibbonaciego iteracyjne oraz rekurencyjne
 import fib
 
 fibCount = int (input("Ile wyrazów ciągu wyznaczyć: "))

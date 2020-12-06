@@ -1,5 +1,5 @@
-#def isPalindrome(text):
-#    return text[::-1].lower() == text.lower()
+#weryfikująca, czy ciąg znaków jest palindromem 
+#return text[::-1].lower() == text.lower()
 
 def isPalindrome(text):
     text = text.lower()

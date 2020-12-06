@@ -1,3 +1,4 @@
+#pierwiastki równania liniowego i kwadratowego 
 from LinearSolver import LinearSolver
 from QuadraticSolver import QuadraticSolver
 LS = LinearSolver

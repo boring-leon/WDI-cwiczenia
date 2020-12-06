@@ -1,3 +1,4 @@
+#wartości występujące w ciągu najczęściej
 import helpers
 
 sequenceLength = int(input("Podaj dlugosc ciagu: "))

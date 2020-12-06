@@ -1,3 +1,4 @@
+# największy wspólny dzielnik 
 import Calculator
 
 while True:

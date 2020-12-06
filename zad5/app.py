@@ -1,3 +1,4 @@
+# element maksymalny oraz minimalny w ciągu liczb
 def findMax(arr):
     throwIfEmpty(arr)
     max = arr[0]
