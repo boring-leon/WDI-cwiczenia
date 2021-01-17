@@ -2,7 +2,7 @@
 #return text[::-1].lower() == text.lower()
 
 def isPalindrome(text):
-    text = text.lower()
+    text = text.lower().replace(" ", "")
     for index in range(0, len(text)): 
       if text[index] != text[len(text) - index - 1]:
             return False
