@@ -20,6 +20,17 @@ def getStandardDeviation(sequence):
 
 sequence = [1, 2, 3 ,4 ,5]
 
+
+sequence = []
+userInput = None
+
+while True:
+    userInput = str(input("Podaj liczbę lub wciśnij x, aby przejść do obliczeń "))
+    if userInput == "x":
+        break
+    else: 
+        sequence.append(int(userInput))
+
 print(f"Średnia arytmetyczna ciągu = {getAverage(sequence)}")
 print(f"Wariancja ciągu = {getVariance(sequence)}")
 print(f"Odchylenie standardowe ciągu = {getStandardDeviation(sequence)}")
