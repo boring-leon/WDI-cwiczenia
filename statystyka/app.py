@@ -17,10 +17,6 @@ def getVariance(sequence):
 def getStandardDeviation(sequence):
     return math.sqrt(getVariance(sequence))
 
-
-sequence = [1, 2, 3 ,4 ,5]
-
-
 sequence = []
 userInput = None
 
